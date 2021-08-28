@@ -2,8 +2,6 @@ import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap');
-
   html,
   body {
     padding: 0;
@@ -23,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  )
 }
 export default MyApp
