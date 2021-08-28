@@ -32,6 +32,8 @@ const Body = styled.p`
   color: ${color['gray'][500]};
   font-size: ${fontSize[14]};
   padding: ${spacing[8]};
+  max-height: 140px;
+  overflow-y: scroll;
 `
 
 const Date = styled.div`

@@ -9,5 +9,5 @@ export function Logo() {
     color: ${color['pink'][900]};
   `
 
-  return <Logo>film</Logo>
+  return <Logo>stock</Logo>
 }

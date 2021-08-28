@@ -47,7 +47,7 @@ export function ArticleList() {
   const List = styled.ul`
     max-width: 1024px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(360px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(242px,1fr));
   `;
 
   const ListItem = styled.li`
