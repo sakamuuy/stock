@@ -1,23 +1,18 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
-import { Header } from "../components/molecules/Header";
-import { color } from "../design/color";
+import { ReactNode } from 'react'
+import styled from 'styled-components'
+import { Header } from '../components/molecules/Header'
 
 type Props = {
   children?: ReactNode
 }
 
-const Box = styled.div`
-  
-`
+const Box = styled.div``
 
 export function CommonLayout({ children }: Props) {
   return (
     <>
       <Header />
-      <Box>
-        {children}
-      </Box>
+      <Box>{children}</Box>
     </>
   )
 }

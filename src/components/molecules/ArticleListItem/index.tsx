@@ -1,7 +1,8 @@
-import styled from "styled-components"
-import { color } from "../../../design/color"
-import { fontSize } from "../../../design/fontSize"
-import { spacing } from "../../../design/spacing"
+import styled from 'styled-components'
+import { color } from '../../../design/color'
+import { fontSize } from '../../../design/fontSize'
+import { spacing } from '../../../design/spacing'
+import { ListItemImg } from '../../atoms/ListItemImg'
 
 type Props = {
   title: string
@@ -15,11 +16,15 @@ const ListItem = styled.div`
   overflow: hidden;
   border: 1px solid ${color['gray'][200]};
   background: ${color.white};
+
+  &:hover {
+    opacity: .8;
+  }
 `
 
 const Box = styled.div`
   position: relative;
-  padding: ${spacing[24]} ${spacing[8]}; 
+  padding: ${spacing[24]} ${spacing[8]};
 `
 
 const Title = styled.h3`
@@ -44,10 +49,16 @@ const Date = styled.div`
   font-size: ${fontSize[12]};
 `
 
+const ListImg = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
+`
+
 export function ArticleListItem({ title, body, thumbnailUrl, updatedDate }: Props) {
   return (
     <ListItem>
-      <img src={thumbnailUrl} height='120' width='360' />
+      <ListItemImg src={thumbnailUrl} />
       <Box>
         <Title>{title}</Title>
         <Date>{updatedDate}</Date>

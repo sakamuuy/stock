@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
-import { ArticleList } from '../src/components/organisms/ArticleList'
-import { CommonLayout } from '../src/layout'
+import { ArticleList } from '../../src/components/organisms/ArticleList'
+import { CommonLayout } from '../../src/layout'
 
 const Home: NextPage = () => {
   return (
     <CommonLayout>
       <div>
-        home
+        <ArticleList />
       </div>
     </CommonLayout>
   )
