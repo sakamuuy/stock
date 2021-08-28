@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import { createGlobalStyle } from 'styled-components'
 import 'destyle.css'
 import { color } from '../src/design/color'
@@ -10,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
       Helvetica Neue, sans-serif;
-    /* background: ${color['gray'][800]}; */
+    background: ${color['gray'][800]};
   }
 
   a {
@@ -26,6 +27,9 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <title>stock</title>
+      </Head>
       <GlobalStyle />
       <Component {...pageProps} />
     </>

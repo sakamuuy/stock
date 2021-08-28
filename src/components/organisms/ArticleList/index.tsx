@@ -39,8 +39,8 @@ const mock = [
 
 export function ArticleList() {
   const Box = styled.div`
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
   `
 
   const List = styled.ul`
