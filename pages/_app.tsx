@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
+import 'destyle.css'
+import { color } from '../src/design/color'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -8,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
       Helvetica Neue, sans-serif;
+    background: ${color['gray'][900]};
   }
 
   a {

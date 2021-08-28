@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
           <link href='https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap' rel='stylesheet' />
+          <title>film</title>
         </Head>
         <body>
           <Main />
