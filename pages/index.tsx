@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
+import { CommonLayout } from '../src/layout'
 
 const Home: NextPage = () => {
   return (
-    <div>hoge</div>
+    <CommonLayout>
+      <div>
+        content
+      </div>
+    </CommonLayout>
   )
 }
 
