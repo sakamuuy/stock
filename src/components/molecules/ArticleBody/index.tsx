@@ -8,9 +8,10 @@ type Props = {
 }
 
 const Box = styled.div`
-  background: ${color.white};
+  background: rgba(255,255,255,0.1);
   border-radius: 8px;
-  padding: ${spacing[8]}
+  padding: ${spacing[8]};
+  color: ${color.white};
 `
 
 export function ArticleBody({ children }: Props) {

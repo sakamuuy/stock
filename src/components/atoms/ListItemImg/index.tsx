@@ -4,12 +4,21 @@ type Props = {
   src: string
 }
 
-export function ListItemImg({ src }: Props) {
-  const Img = styled.div`
-    background-image: url(${src});
+// const Img = styled.div`
+//   background-image: url(${(theme: {src: string}) => theme.src});
+//   height: 160px;
+// `
+
+const Img = styled.div.attrs((props: {src: string}) => ({
+    src: props.src
+  }))`
+    background-image: url(${(theme: {src: string}) => theme.src});
     height: 160px;
   `
+
+export function ListItemImg({ src }: Props) {
+
   return (
-    <Img />
+    <Img src={src}/>
   )
 }

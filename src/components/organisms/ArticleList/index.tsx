@@ -37,21 +37,22 @@ const mock = [
   },
 ]
 
+const Box = styled.div`
+/* display: flex;
+justify-content: center; */
+`
+
+const List = styled.ul`
+max-width: 1024px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+`
+
+const ListItem = styled.li`
+margin: ${spacing[16]} ${spacing[16]};
+`
+
 export function ArticleList() {
-  const Box = styled.div`
-    /* display: flex;
-    justify-content: center; */
-  `
-
-  const List = styled.ul`
-    max-width: 1024px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  `
-
-  const ListItem = styled.li`
-    margin: ${spacing[16]} ${spacing[16]};
-  `
 
   return (
     <Box>

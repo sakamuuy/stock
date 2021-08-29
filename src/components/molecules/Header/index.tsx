@@ -8,7 +8,7 @@ const Box = styled.header`
   align-items: center;
   padding-left: ${spacing[32]};
   height: 60px;
-  background: ${color.gray[800]};
+  background: ${color.gray[900]};
 `
 
 const Inner = styled.div`

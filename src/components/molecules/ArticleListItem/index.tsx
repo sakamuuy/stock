@@ -14,8 +14,8 @@ type Props = {
 const ListItem = styled.div`
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid ${color['gray'][200]};
-  background: ${color.white};
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.1);
 
   &:hover {
     opacity: .8;
@@ -28,13 +28,13 @@ const Box = styled.div`
 `
 
 const Title = styled.h3`
-  color: ${color['gray'][800]};
+  color: ${color['gray'][50]};
   font-size: ${fontSize[18]};
   font-weight: 700;
 `
 
 const Body = styled.p`
-  color: ${color['gray'][500]};
+  color: ${color['gray'][300]};
   font-size: ${fontSize[14]};
   padding: ${spacing[8]};
   max-height: 140px;
@@ -45,7 +45,7 @@ const Date = styled.div`
   position: absolute;
   bottom: 0;
   right: ${spacing[8]};
-  color: ${color['gray'][500]};
+  color: ${color['gray'][300]};
   font-size: ${fontSize[12]};
 `
 

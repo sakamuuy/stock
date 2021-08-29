@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import styled from 'styled-components'
 import { Header } from '../../../components/molecules/Header'
+import { Footer } from '../../molecules/Footer'
 
 type Props = {
   children?: ReactNode
@@ -25,6 +26,7 @@ export function CommonLayout({ children }: Props) {
           {children}
         </Inner>
       </Box>
+      <Footer />
     </>
   )
 }
