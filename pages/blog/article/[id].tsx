@@ -36,7 +36,7 @@ type Params = {
 }
 export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) => {
   const data = await getArticleData(params!.id)
-console.log(data)
+
   return {
     props: {
       id: data.id,

@@ -4,11 +4,12 @@ import { fontSize } from '../../../design/fontSize'
 import { spacing } from '../../../design/spacing'
 import { ListItemImg } from '../../atoms/ListItemImg'
 
-type Props = {
+export type ArticleItem = {
+  id: string
   title: string
-  body: string
+  expression: string
   thumbnailUrl: string
-  updatedDate: string
+  date: string
 }
 
 const ListItem = styled.div`
@@ -55,15 +56,15 @@ const ListImg = styled.img`
   height: auto;
 `
 
-export function ArticleListItem({ title, body, thumbnailUrl, updatedDate }: Props) {
+export function ArticleListItem({ title, expression, thumbnailUrl, date }: ArticleItem) {
   return (
     <ListItem>
       <ListItemImg src={thumbnailUrl} />
       <Box>
         <Title>{title}</Title>
-        <Date>{updatedDate}</Date>
+        <Date>{date}</Date>
       </Box>
-      <Body>{body}</Body>
+      <Body>{expression}</Body>
     </ListItem>
   )
 }

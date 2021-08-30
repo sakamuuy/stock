@@ -3,19 +3,24 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import type { ArticleItem } from '../components/molecules/ArticleListItem'
 
 const articlesDir = path.join(process.cwd(), 'articles')
 export function getSortedArticles() {
   const fileNames = fs.readdirSync(articlesDir)
-  const allArticles: { id: string, date: string }[] = fileNames.map((name) => {
+  const allArticles: ArticleItem[] = fileNames.map((name) => {
     const fullPath = path.join(articlesDir, name)
     const contents = fs.readFileSync(fullPath)
     const matterResult = matter(contents)
+    const data = matterResult.data
 
     const id = name.replace(/\.md$/, '')
     return {
-      id,
-      ...matterResult.data as any
+      id: name,
+      title: data.title,
+      expression: data.expression,
+      date: data.date,
+      thumbnailUrl: data.image
     }
   })
 
