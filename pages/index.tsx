@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <CommonLayout>
       <div>
-        <ArticleList />
+        home
       </div>
     </CommonLayout>
   )
