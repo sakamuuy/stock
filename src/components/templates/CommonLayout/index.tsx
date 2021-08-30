@@ -8,8 +8,7 @@ type Props = {
 }
 
 const Box = styled.div`
-  /* display: flex;
-  justify-content: center; */
+  min-height: 100vh;
 `
 
 const Inner = styled.div`

@@ -30,7 +30,7 @@ export function ArticleList({articles}: Props) {
       <List>
         {articles.map((data) => (
           <ListItem key={data.title}>
-            <Link href='' passHref>
+            <Link href={`/blog/article/${data.id}`} passHref>
               <a>
                 <ArticleListItem {...data} />
               </a>

@@ -14,9 +14,8 @@ export function getSortedArticles() {
     const matterResult = matter(contents)
     const data = matterResult.data
 
-    const id = name.replace(/\.md$/, '')
     return {
-      id: name,
+      id: name.replace(/\.md$/, ''),
       title: data.title,
       expression: data.expression,
       date: data.date,
